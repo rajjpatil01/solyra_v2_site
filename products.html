@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.solyralifesciences.com/products.html">
+<meta property="og:title" content="Products | Solyra Lifesciences">
+<meta property="og:description" content="Explore Solyra Lifesciences' science-based wellness products designed with quality, simplicity, and everyday health in mind.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.solyralifesciences.com/products.html">
+<meta property="og:image" content="https://www.solyralifesciences.com/assets/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Products | Solyra Lifesciences">
+<meta name="twitter:description" content="Explore Solyra's science-based wellness products and future wellness areas.">
+<meta name="twitter:image" content="https://www.solyralifesciences.com/assets/og-image.jpg">
+
+<title>Products | Solyra Lifesciences</title>
+<meta name="description" content="Explore Solyra Lifesciences' science-based wellness products designed with quality ingredients and everyday health in mind.">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.products-hero{
+    min-height:58vh;
+    padding:130px 7% 70px;
+    background:#071B1D;
+    color:white;
+    display:flex;
+    align-items:center;
+    text-align:center;
+}
+
+.products-hero-inner{
+    max-width:900px;
+    margin:auto;
+}
+
+.products-hero h1{
+    font-size:clamp(52px,7vw,88px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin:20px 0 28px;
+}
+
+.products-hero p{
+    max-width:720px;
+    margin:0 auto 38px;
+    color:rgba(255,255,255,.72);
+    font-size:20px;
+    line-height:1.8;
+}
+
+.current-product{
+    background:#FCFCFA;
+}
+
+.current-product-card{
+    max-width:1180px;
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    background:white;
+    border-radius:38px;
+    padding:70px;
+    box-shadow:0 30px 90px rgba(10,77,104,.10);
+}
+
+.current-product-image{
+    min-height:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.current-product-image::before{
+    content:"";
+    position:absolute;
+    width:430px;
+    height:430px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(10,77,104,.14),transparent 65%);
+}
+
+.current-product-image img{
+    width:100%;
+    max-width:410px;
+    position:relative;
+    z-index:2;
+    filter:drop-shadow(0 45px 90px rgba(10,77,104,.24));
+    animation:floatBottle 5s ease-in-out infinite;
+}
+
+.current-product-info h2{
+    font-size:clamp(42px,5vw,72px);
+    line-height:1;
+    color:#102A33;
+    margin:16px 0 20px;
+}
+
+.current-product-info p{
+    color:#5E6E76;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:32px;
+}
+
+.product-meta-line{
+    color:#0A4D68;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.future-areas{
+    background:#F8FBFC;
+}
+
+.area-grid{
+    max-width:1180px;
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.area-card{
+    background:white;
+    padding:36px 30px;
+    border-radius:28px;
+    box-shadow:0 22px 65px rgba(10,77,104,.08);
+    transition:.3s ease;
+}
+
+.area-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 30px 80px rgba(10,77,104,.12);
+}
+
+
+.area-card h3{
+    color:#102A33;
+    font-size:24px;
+    margin-bottom:14px;
+}
+
+.area-card p{
+    color:#5E6E76;
+    line-height:1.7;
+}
+
+.choose-section{
+    background:#ffffff;
+}
+
+.choose-grid{
+    max-width:1180px;
+    margin:60px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+}
+
+.choose-card{
+    border:1px solid rgba(10,77,104,.10);
+    border-radius:28px;
+    padding:38px 32px;
+    background:#fff;
+    transition:.3s ease;
+}
+
+.choose-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 30px 80px rgba(10,77,104,.10);
+}
+
+.choose-card h3{
+    color:#0A4D68;
+    font-size:24px;
+    margin-bottom:16px;
+}
+
+.choose-card p{
+    color:#5E6E76;
+    line-height:1.8;
+}
+
+.products-cta{
+    background:#071B1D;
+    color:white;
+    text-align:center;
+    padding:100px 7%;
+}
+
+.products-cta h2{
+    font-size:clamp(38px,5vw,72px);
+    margin-bottom:22px;
+}
+
+.products-cta p{
+    max-width:650px;
+    margin:0 auto 36px;
+    color:rgba(255,255,255,.72);
+    line-height:1.8;
+}
+
+@media(max-width:900px){
+    .current-product-card{
+        grid-template-columns:1fr;
+        padding:44px;
+    }
+
+    .area-grid,
+    .choose-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:560px){
+    .area-grid,
+    .choose-grid{
+        grid-template-columns:1fr;
+    }
+
+    .products-hero h1{
+        letter-spacing:-2px;
+    }
+}
+.product-trust-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:0 0 32px;
+}
+
+.product-trust-pills span{
+    padding:10px 18px;
+    border-radius:999px;
+    background:#EEF7F8;
+    color:#0A4D68;
+    font-size:13px;
+    font-weight:700;
+}
+.footer-v2{
+    background:#071B1D;
+    color:#ffffff;
+    padding:90px 7% 34px;
+}
+
+.footer-main{
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1.25fr 1.35fr 1fr;
+    gap:46px;
+    align-items:flex-start;
+}
+
+.footer-brand h3{
+    font-size:34px;
+    letter-spacing:7px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.footer-tagline{
+    color:rgba(255,255,255,.78);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:26px;
+}
+
+.footer-desc{
+    max-width:310px;
+    color:rgba(255,255,255,.70);
+    line-height:1.9;
+    font-size:15px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+}
+
+.footer-column h4{
+    color:#ffffff;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.footer-column a,
+.footer-column span{
+    display:block;
+    color:rgba(255,255,255,.72);
+    text-decoration:none;
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:13px;
+    transition:.25s ease;
+}
+
+.footer-column a:hover{
+    color:#ffffff;
+    transform:translateX(4px);
+}
+
+.footer-column a[href^="tel"]{
+    color:#ffffff;
+    font-weight:600;
+}
+
+.footer-bottom{
+    max-width:1280px;
+    margin:80px auto 0;
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.12);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+}
+
+@media(max-width:1100px){
+    .footer-main{
+        grid-template-columns:2fr 1fr 1fr;
+    }
+}
+
+@media(max-width:760px){
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+        gap:42px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:560px){
+    .footer-v2{
+        padding:70px 7% 30px;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+<nav class="nav">
+    <a href="index.html" class="brand">
+        <span class="brand-mark">SOLYRA</span>
+        <span class="brand-subtitle">Science-Based Wellness</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<section class="products-hero">
+    <div class="products-hero-inner reveal">
+        <p class="eyebrow">OUR PRODUCTS</p>
+        <h1>Wellness products, built with purpose.</h1>
+        <p>
+            Thoughtfully developed science-based wellness products designed around quality,
+            simplicity and everyday health.
+        </p>
+        <a href="#current-product" class="btn btn-primary">Explore SOLVIT D3</a>
+    </div>
+</section>
+
+<section class="section current-product" id="current-product">
+    <div class="section-heading reveal">
+        <p class="eyebrow dark">CURRENT PRODUCT</p>
+        <h2>Introducing SOLVIT D3</h2>
+    </div>
+
+    <div class="current-product-card reveal">
+        <div class="current-product-image">
+            <img src="assets/D3.png" alt="SOLVIT D3">
+        </div>
+
+        <div class="current-product-info">
+            <p class="product-meta-line">
+    Vitamin D3 600 IU • 30 Softgel Capsules
+</p>
+
+<div class="product-trust-pills">
+    <span>Science-Based</span>
+    <span>Made in India</span>
+    <span>FSSAI Registered</span>
+</div>
+            <h2>SOLVIT D3</h2>
+            <p>
+                A thoughtfully formulated Vitamin D3 supplement designed to support everyday
+                wellness through science, quality and simplicity.
+            </p>
+            <a href="product-d3.html" class="btn btn-dark">View Product</a>
+        </div>
+    </div>
+</section>
+
+<section class="section future-areas">
+    <div class="section-heading reveal">
+        <p class="eyebrow dark">GROWING RESPONSIBLY.</p>
+        <h2>Future Wellness Areas</h2>
+        <p>
+As Solyra grows, we'll thoughtfully expand into wellness categories that align with our commitment to science, quality, and everyday health.
+</p>
+    </div>
+
+    <div class="area-grid">
+        <article class="area-card reveal">
+            
+            <h3>Bone & Muscle Health</h3>
+            <p>Wellness areas focused on strength, mobility and everyday physical support.</p>
+        </article>
+
+        <article class="area-card reveal">
+            
+            <h3>Essential Nutrition</h3>
+            <p>Nutrition-focused categories designed for modern daily wellness routines.</p>
+        </article>
+
+        <article class="area-card reveal">
+            
+            <h3>Heart & Metabolic Wellness</h3>
+            <p>Future areas aligned with long-term wellness and healthy lifestyle support.</p>
+        </article>
+
+        <article class="area-card reveal">
+            
+            <h3>Immunity & General Wellness</h3>
+            <p>Categories that support consistent wellness habits and everyday health needs.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section choose-section">
+    <div class="section-heading reveal">
+        <p class="eyebrow dark">HOW WE CHOOSE</p>
+        <h2>Every product must earn its place.</h2>
+    </div>
+
+    <div class="choose-grid">
+        <article class="choose-card reveal">
+            <h3>Science First</h3>
+            <p>Every product direction begins with scientific thinking and real wellness needs.</p>
+        </article>
+
+        <article class="choose-card reveal">
+            <h3>Quality Assured</h3>
+            <p>Ingredient selection and manufacturing choices are guided by quality and consistency.</p>
+        </article>
+
+        <article class="choose-card reveal">
+            <h3>Built for Trust</h3>
+            <p>We launch products only when they align with our standards for clarity, responsibility and trust.</p>
+        </article>
+    </div>
+</section>
+
+<section class="products-cta">
+    <h2>Let's build better wellness together.</h2>
+    <p>
+    Whether you're exploring our products or looking to partner with Solyra, we'd love to hear from you.
+</p>
+    <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+</section>
+
+</main>
+
+<footer class="footer footer-v2">
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <h3>SOLYRA</h3>
+            <p class="footer-tagline">Science-Based Wellness</p>
+            <p class="footer-desc">
+                Building trust through science-first wellness products designed for everyday life.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="story.html">Our Story</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Support</h4>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="mailto:solyralifesciences@gmail.com">solyralifesciences@gmail.com</a>
+            <a href="tel:+917046209065">+91 7046209065</a>
+            <a href="https://wa.me/917046209065" target="_blank">WhatsApp</a>
+            <span>Surat, Gujarat, India</span>
+        </div>
+
+        <div class="footer-column">
+            <h4>Follow</h4>
+            <a href="https://www.instagram.com/solyra_lifesciences/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Solyra Lifesciences. All Rights Reserved.</p>
+        <p>Science-Based Wellness • Made in India</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

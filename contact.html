@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.solyralifesciences.com/contact.html">
+<meta property="og:title" content="Contact | Solyra Lifesciences">
+<meta property="og:description" content="Contact Solyra Lifesciences for product enquiries, partnerships, distribution opportunities, or support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.solyralifesciences.com/contact.html">
+<meta property="og:image" content="https://www.solyralifesciences.com/assets/og-image.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact | Solyra Lifesciences">
+<meta name="twitter:description" content="Reach Solyra Lifesciences for product and business enquiries.">
+<meta name="twitter:image" content="https://www.solyralifesciences.com/assets/og-image.jpg">
+
+<title>Contact | Solyra Lifesciences</title>
+<meta name="description" content="Contact Solyra Lifesciences for product enquiries, partnerships, distribution opportunities, or general support.">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.contact-hero{
+    min-height:62vh;
+    padding:150px 7% 90px;
+    background:#071B1D;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.contact-hero-inner{
+    max-width:900px;
+}
+
+.contact-hero h1{
+    font-size:clamp(56px,8vw,100px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin:22px 0;
+}
+
+.contact-hero p{
+    max-width:720px;
+    margin:auto;
+    color:rgba(255,255,255,.72);
+    font-size:20px;
+    line-height:1.8;
+}
+
+.contact-page-section{
+    padding:110px 7%;
+    background:#FCFCFA;
+}
+
+.contact-grid{
+    max-width:1180px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:40px;
+    align-items:stretch;
+}
+
+.contact-info-card,
+.contact-form-card{
+    background:white;
+    border-radius:34px;
+    padding:48px;
+    box-shadow:0 28px 80px rgba(10,77,104,.08);
+}
+
+.contact-info-card h2,
+.contact-form-card h2{
+    font-size:36px;
+    color:#102A33;
+    margin-bottom:24px;
+}
+
+.contact-info-card p{
+    color:#5E6E76;
+    line-height:1.8;
+    margin-bottom:32px;
+}
+
+.contact-detail{
+    padding:22px 0;
+    border-bottom:1px solid #E8EEF0;
+}
+
+.contact-detail:last-child{
+    border-bottom:none;
+}
+
+.contact-detail span{
+    display:block;
+    color:#0A4D68;
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.contact-detail a,
+.contact-detail p{
+    color:#102A33;
+    text-decoration:none;
+    font-weight:600;
+    margin:0;
+}
+
+.contact-form{
+    display:grid;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    padding:17px 18px;
+    border-radius:16px;
+    border:1px solid #DDE8EA;
+    font-family:Inter,sans-serif;
+    font-size:15px;
+    outline:none;
+    background:#F8FBFC;
+}
+
+.contact-form textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+    border-color:#0A4D68;
+    background:white;
+}
+
+.contact-note{
+    font-size:13px;
+    color:#6B7780;
+    line-height:1.7;
+}
+
+@media(max-width:900px){
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-hero h1{
+        letter-spacing:-2px;
+    }
+
+    .contact-info-card,
+    .contact-form-card{
+        padding:34px;
+    }
+}
+.success-message{
+    display:none;
+    background:#EAF8EF;
+    color:#17643A;
+    border:1px solid #BFE5CC;
+    padding:16px 20px;
+    border-radius:14px;
+    margin-bottom:24px;
+    font-weight:600;
+}
+.footer-v2{
+    background:#071B1D;
+    color:#ffffff;
+    padding:90px 7% 34px;
+}
+
+.footer-main{
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1.25fr 1.35fr 1fr;
+    gap:46px;
+    align-items:flex-start;
+}
+
+.footer-brand h3{
+    font-size:34px;
+    letter-spacing:7px;
+    font-weight:900;
+    margin-bottom:14px;
+}
+
+.footer-tagline{
+    color:rgba(255,255,255,.78);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    margin-bottom:26px;
+}
+
+.footer-desc{
+    max-width:310px;
+    color:rgba(255,255,255,.70);
+    line-height:1.9;
+    font-size:15px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+}
+
+.footer-column h4{
+    color:#ffffff;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.footer-column a,
+.footer-column span{
+    display:block;
+    color:rgba(255,255,255,.72);
+    text-decoration:none;
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:13px;
+    transition:.25s ease;
+}
+
+.footer-column a:hover{
+    color:#ffffff;
+    transform:translateX(4px);
+}
+
+.footer-column a[href^="tel"]{
+    color:#ffffff;
+    font-weight:600;
+}
+
+.footer-bottom{
+    max-width:1280px;
+    margin:80px auto 0;
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.12);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+}
+
+@media(max-width:1100px){
+    .footer-main{
+        grid-template-columns:2fr 1fr 1fr;
+    }
+}
+
+@media(max-width:760px){
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+        gap:42px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:560px){
+    .footer-v2{
+        padding:70px 7% 30px;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+<nav class="nav">
+    <a href="index.html" class="brand">
+        <span class="brand-mark">SOLYRA</span>
+        <span class="brand-subtitle">Science-Based Wellness</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="story.html">Our Story</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<section class="contact-hero">
+    <div class="contact-hero-inner reveal">
+        <p class="eyebrow">CONTACT SOLYRA</p>
+        <h1>Let's connect.</h1>
+        <p>
+            For product enquiries, distribution, partnerships, or collaboration,
+            our team would be happy to hear from you.
+        </p>
+    </div>
+</section>
+
+<section class="contact-page-section">
+    <div class="contact-grid">
+
+        <div class="contact-info-card reveal">
+            <h2>Reach Us</h2>
+            <p>
+                Whether you're a customer, retailer, healthcare professional, or distributor,
+                you can connect with Solyra directly.
+            </p>
+
+            <div class="contact-detail">
+                <span>Email</span>
+                <a href="mailto:solyralifesciences@gmail.com">solyralifesciences@gmail.com</a>
+            </div>
+
+            <div class="contact-detail">
+                <span>Phone</span>
+                <a href="tel:+917046209065">+91 7046209065</a>
+            </div>
+
+            <div class="contact-detail">
+                <span>Location</span>
+                <p>Surat, Gujarat, India</p>
+            </div>
+
+            <div class="contact-detail">
+                <span>Business Enquiries</span>
+                <a href="https://wa.me/917046209065" target="_blank">Chat on WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="contact-form-card reveal">
+            <h2>Send an Enquiry</h2>
+            <div id="successMessage" class="success-message">
+    ✅ Thank you! Your enquiry has been submitted successfully. We'll get back to you soon.
+</div>
+
+            <form class="contact-form" action=https://script.google.com/macros/s/AKfycby6R7Pj20q1Ou5QL-6dDnWCo6KPaPNwyp5VIRvXRJoON9hdjIXz7Cu-K3hYNzl4_SzT/exec method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <input type="tel" name="phone" placeholder="Phone Number">
+
+                <select name="enquiry_type" required>
+    <option value="">Select Enquiry Type</option>
+    <option>Product Enquiry</option>
+    <option>Distribution</option>
+    <option>Retail Partnership</option>
+    <option>General Collaboration</option>
+</select>
+
+                <textarea name="message" placeholder="Tell us how we can help"></textarea>
+
+                <button type="submit" class="btn btn-dark">Submit Enquiry</button>
+
+                <p class="contact-note">
+                    This form is currently for layout purposes. Connect it later using Formspree,
+                    Google Forms, Netlify Forms, or your backend.
+                </p>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer footer-v2">
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <h3>SOLYRA</h3>
+            <p class="footer-tagline">Science-Based Wellness</p>
+            <p class="footer-desc">
+                Building trust through science-first wellness products designed for everyday life.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Company</h4>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="story.html">Our Story</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Support</h4>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Connect</h4>
+            <a href="mailto:solyralifesciences@gmail.com">solyralifesciences@gmail.com</a>
+            <a href="tel:+917046209065">+91 7046209065</a>
+            <a href="https://wa.me/917046209065" target="_blank">WhatsApp</a>
+            <span>Surat, Gujarat, India</span>
+        </div>
+
+        <div class="footer-column">
+            <h4>Follow</h4>
+            <a href="https://www.instagram.com/solyra_lifesciences/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Solyra Lifesciences. All Rights Reserved.</p>
+        <p>Science-Based Wellness • Made in India</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const contactForm = document.querySelector(".contact-form");
+
+contactForm.addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    try{
+        await fetch(contactForm.action, {
+            method:"POST",
+            body:formData
+        });
+
+        const successMessage = document.getElementById("successMessage");
+
+successMessage.style.display = "block";
+
+
+setTimeout(() => {
+    successMessage.style.display = "none";
+}, 5000);
+        contactForm.reset();
+
+    }catch(error){
+        alert("Something went wrong. Please try again or contact us on WhatsApp.");
+    }
+});
+</script>
+
+</body>
+</html>
