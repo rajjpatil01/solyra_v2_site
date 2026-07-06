@@ -3,9 +3,30 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 30);
 });
 
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-navToggle?.addEventListener('click', () => navLinks.classList.toggle('open'));
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+if(navToggle && navLinks){
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+
+        if(navLinks.classList.contains("open")){
+            navToggle.innerHTML = "×";
+            document.body.style.overflow = "hidden";
+        }else{
+            navToggle.innerHTML = "☰";
+            document.body.style.overflow = "";
+        }
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            navToggle.innerHTML = "☰";
+            document.body.style.overflow = "";
+        });
+    });
+}
 
 const slides = [...document.querySelectorAll('.hero-slide')];
 const dots = [...document.querySelectorAll('.slider-dot')];
