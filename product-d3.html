@@ -57,24 +57,24 @@
 </script>
 
 <style>
-    /* Navbar visible immediately on product page */
-.site-header{
-    background:rgba(255,255,255,0.94) !important;
-    border-bottom:1px solid rgba(10,77,104,0.10) !important;
-    box-shadow:0 10px 40px rgba(0,0,0,0.06) !important;
+    /* Same visible navbar style used across light-background pages */
+.product-page .site-header{
+    background:rgba(255,255,255,0.94);
+    border-bottom:1px solid rgba(10,77,104,0.10);
+    box-shadow:0 10px 40px rgba(0,0,0,0.06);
 }
 
-.site-header .brand-mark,
-.site-header .brand-subtitle,
-.site-header .nav-links a,
-.site-header .nav-toggle{
-    color:#102A33 !important;
+.product-page .site-header .brand-mark,
+.product-page .site-header .brand-subtitle,
+.product-page .site-header .nav-links a,
+.product-page .site-header .nav-toggle{
+    color:#102A33;
 }
 
-.site-header .nav-cta{
-    background:#0A4D68 !important;
+.product-page .site-header .nav-links .nav-cta{
+    background:#0A4D68;
     color:#ffffff !important;
-    border-color:#0A4D68 !important;
+    border-color:#0A4D68;
 }
 .product-hero{
     min-height:88vh;
@@ -602,7 +602,7 @@
 </style>
 </head>
 
-<body>
+<body class="product-page">
 
 <header class="site-header" id="siteHeader">
 <nav class="nav">
