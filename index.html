@@ -589,6 +589,117 @@ html{
         grid-template-columns:1fr;
     }
 }
+.products-grid{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.product-list-card{
+    background:#ffffff;
+    border:1px solid rgba(10,77,104,.08);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 18px 50px rgba(10,77,104,.08);
+    transition:transform .3s ease, box-shadow .3s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-list-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 65px rgba(10,77,104,.13);
+}
+
+.product-list-image{
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#F8F7F2;
+    overflow:hidden;
+    padding:25px;
+}
+
+.product-list-image img{
+    width:210px;
+    max-width:90%;
+    height:240px;
+    object-fit:contain;
+    filter:drop-shadow(0 22px 28px rgba(0,0,0,.16));
+}
+
+.product-list-info{
+    padding:28px 26px 30px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.product-list-info .product-kicker{
+    margin-bottom:10px;
+}
+
+.product-list-info h3{
+    font-size:28px;
+    line-height:1.1;
+    margin:6px 0 14px;
+    color:#0A4D68;
+}
+
+.product-list-info p:not(.product-kicker){
+    color:#617079;
+    font-size:15px;
+    line-height:1.65;
+    margin-bottom:24px;
+}
+
+.product-list-info .btn{
+    align-self:flex-start;
+    margin-top:auto;
+}
+
+.product-coming-soon{
+    background:#F8F7F2;
+    color:#617079;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.product-status{
+    display:inline-block;
+    align-self:flex-start;
+    padding:9px 15px;
+    border:1px solid rgba(10,77,104,.15);
+    border-radius:999px;
+    color:#0A4D68;
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .products-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .product-list-image{
+        height:260px;
+    }
+
+    .product-list-info{
+        padding:25px 22px 28px;
+    }
+
+}
 </style>
 </head>
 <body>
@@ -659,56 +770,106 @@ html{
 
   <div class="products-grid">
 
-    <!-- SOLVIT D3 -->
-    <article class="product-list-card reveal">
+  <!-- SOLVIT D3 -->
+  <article class="product-list-card reveal">
 
-      <div class="product-list-image">
-        <img src="assets/D3.png" alt="SOLVIT D3 Vitamin D3 600 IU">
-      </div>
+    <div class="product-list-image">
+      <img src="assets/D3.png"
+           alt="SOLVIT D3 Vitamin D3 600 IU">
+    </div>
 
-      <div class="product-list-info">
-        <p class="product-kicker">Vitamin D3 · 30 Softgel Capsules</p>
+    <div class="product-list-info">
 
-        <h3>SOLVIT D3</h3>
+      <p class="product-kicker">
+        Vitamin D3 · 600 IU
+      </p>
 
-        <p>
-          A thoughtfully formulated Vitamin D3 supplement designed to support
-          everyday wellness through science, quality and simplicity.
-        </p>
+      <h3>SOLVIT D3</h3>
 
-        <a href="product-d3.html" class="btn btn-dark">
-          View Product
-        </a>
-      </div>
+      <p>
+        A thoughtfully formulated Vitamin D3 supplement designed
+        for everyday wellness through science, quality and simplicity.
+      </p>
 
-    </article>
+      <a href="product-d3.html" class="btn btn-dark">
+        View Product
+      </a>
 
-    <!-- SOL-OMEGA 3 -->
-    <article class="product-list-card reveal">
+    </div>
 
-      <div class="product-list-image product-coming-soon">
-        <span>Coming Soon</span>
-      </div>
+  </article>
 
-      <div class="product-list-info">
-        <p class="product-kicker">Omega-3 · Under Development</p>
 
-        <h3>SOL-OMEGA 3</h3>
+  <!-- SOMEGA-3 -->
+  <article class="product-list-card reveal">
 
-        <p>
-          A future Solyra formulation focused on everyday wellness,
-          developed with the same science-first approach.
-        </p>
+    <div class="product-list-image product-coming-soon">
+      <span>Coming Soon</span>
+    </div>
 
-        <span class="product-status">
-          Under Development
-        </span>
-      </div>
+    <div class="product-list-info">
 
-    </article>
+      <p class="product-kicker">
+        Omega-3 · 1000 mg
+      </p>
 
-  </div>
+      <h3>SOMEGA-3</h3>
 
+      <p>
+        A science-focused Omega-3 formulation developed with
+        carefully selected ingredients for everyday wellness.
+      </p>
+
+      <span class="product-status">
+        Under Development
+      </span>
+
+    </div>
+
+  </article>
+
+
+  <!-- SOMEGA-3 + COQ10 -->
+  <article class="product-list-card reveal">
+
+    <div class="product-list-image product-coming-soon">
+      <span>Coming Soon</span>
+    </div>
+
+    <div class="product-list-info">
+
+      <p class="product-kicker">
+        Omega-3 + CoQ10
+      </p>
+
+      <h3>SOMEGA-3 + CoQ10</h3>
+
+      <p>
+        A thoughtfully developed combination of Omega-3 and
+        Coenzyme Q10 with a science-first approach.
+      </p>
+
+      <span class="product-status">
+        Under Development
+      </span>
+
+    </div>
+
+  </article>
+
+</div>
+
+  </article>
+
+</div>
+
+
+<!-- EXPLORE PRODUCTS -->
+<div style="text-align:center; margin-top:45px;">
+  <a href="products.html" class="btn btn-dark">
+    Explore Products
+  </a>
+</div>
 </section>
 
    <section class="section philosophy-section" id="philosophy">
