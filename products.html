@@ -30,7 +30,7 @@
 <style>
 .products-hero{
     min-height:58vh;
-    padding:130px 7% 70px;
+    padding:130px 7% 30px;
     background:#071B1D;
     color:white;
     display:flex;
@@ -241,6 +241,160 @@
     gap:12px;
     margin:0 0 32px;
 }
+.product-catalog{
+    background:#FCFCFA;
+    padding:80px 7% 110px;
+}
+
+.product-filters{
+    max-width:1200px;
+    margin:0 auto 50px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.product-filter{
+    padding:13px 24px;
+    border:1px solid #0A4D68;
+    border-radius:10px;
+    background:#ffffff;
+    color:#0A4D68;
+    font-size:16px;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.product-filter:hover,
+.product-filter.active{
+    background:#0A4D68;
+    color:#ffffff;
+}
+
+.catalog-grid{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.catalog-card{
+    background:#ffffff;
+    border:1px solid rgba(10,77,104,.08);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 18px 55px rgba(10,77,104,.08);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.catalog-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 28px 70px rgba(10,77,104,.13);
+}
+
+.catalog-image{
+    height:320px;
+    background:#F2F0E9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.catalog-image img{
+    width:230px;
+    height:270px;
+    object-fit:contain;
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.16));
+}
+
+.catalog-coming-soon{
+    color:#617079;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.catalog-info{
+    padding:28px 26px 30px;
+}
+
+.catalog-kicker{
+    color:#0f5c46;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.catalog-info h3{
+    color:#102A33;
+    font-size:30px;
+    line-height:1.1;
+    margin:0 0 14px;
+}
+
+.catalog-info p{
+    color:#617079;
+    font-size:15px;
+    line-height:1.65;
+    margin-bottom:24px;
+}
+
+.catalog-status{
+    display:inline-block;
+    padding:9px 15px;
+    border:1px solid rgba(10,77,104,.15);
+    border-radius:999px;
+    color:#0A4D68;
+    font-size:12px;
+    font-weight:700;
+}
+
+.catalog-card .btn{
+    display:inline-block;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .catalog-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:620px){
+
+    .product-catalog{
+        padding:60px 6% 80px;
+    }
+
+    .catalog-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-filters{
+        margin-bottom:35px;
+    }
+
+    .product-filter{
+        padding:11px 18px;
+        font-size:14px;
+    }
+
+    .catalog-image{
+        height:280px;
+    }
+
+}
+
 
 .product-trust-pills span{
     padding:10px 18px;
@@ -250,6 +404,7 @@
     font-size:13px;
     font-weight:700;
 }
+
 .footer-v2{
     background:#071B1D;
     color:#ffffff;
@@ -399,39 +554,146 @@
             Thoughtfully developed science-based wellness products designed around quality,
             simplicity and everyday health.
         </p>
-        <a href="#current-product" class="btn btn-primary">Explore SOLVIT D3</a>
     </div>
 </section>
 
-<section class="section current-product" id="current-product">
-    <div class="section-heading reveal">
-        <p class="eyebrow dark">CURRENT PRODUCT</p>
-        <h2>Introducing SOLVIT D3</h2>
+<section class="product-catalog">
+
+    <!-- PRODUCT FILTERS -->
+
+    <div class="product-filters reveal">
+
+        <button class="product-filter active">
+            All
+        </button>
+
+        <button class="product-filter">
+            Daily Wellness
+        </button>
+
+        <button class="product-filter">
+            Omega-3
+        </button>
+
     </div>
 
-    <div class="current-product-card reveal">
-        <div class="current-product-image">
-            <img src="assets/D3.png" alt="SOLVIT D3">
-        </div>
 
-        <div class="current-product-info">
-            <p class="product-meta-line">
-    Vitamin D3 600 IU • 30 Softgel Capsules
-</p>
+    <!-- PRODUCT GRID -->
 
-<div class="product-trust-pills">
-    <span>Science-Based</span>
-    <span>Made in India</span>
-    <span>FSSAI Registered</span>
-</div>
-            <h2>SOLVIT D3</h2>
-            <p>
-                A thoughtfully formulated Vitamin D3 supplement designed to support everyday
-                wellness through science, quality and simplicity.
-            </p>
-            <a href="product-d3.html" class="btn btn-dark">View Product</a>
-        </div>
+    <div class="catalog-grid">
+
+
+        <!-- SOLVIT D3 -->
+
+        <article class="catalog-card reveal" data-category="daily">
+
+            <div class="catalog-image">
+
+                <img
+                    src="assets/D3.png"
+                    alt="SOLVIT D3 Vitamin D3 600 IU"
+                >
+
+            </div>
+
+            <div class="catalog-info">
+
+                <p class="catalog-kicker">
+                    Daily Wellness
+                </p>
+
+                <h3>SOLVIT D3</h3>
+
+                <p>
+                    Vitamin D3 600 IU in a convenient 30-softgel
+                    capsule format, thoughtfully developed for
+                    everyday wellness.
+                </p>
+
+                <a
+                    href="product-d3.html"
+                    class="btn btn-dark"
+                >
+                    View Product
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SOMEGA-3 -->
+
+        <article class="catalog-card reveal" data-category="omega3">
+
+            <div class="catalog-image catalog-coming-soon">
+
+                <span>
+                    Coming Soon
+                </span>
+
+            </div>
+
+            <div class="catalog-info">
+
+                <p class="catalog-kicker">
+                    Omega-3
+                </p>
+
+                <h3>SOMEGA-3</h3>
+
+                <p>
+                    A thoughtfully developed Omega-3 formulation
+                    focused on quality, simplicity and everyday
+                    wellness.
+                </p>
+
+                <span class="catalog-status">
+                    Under Development
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- SOMEGA-3 + COQ10 -->
+
+        <article class="catalog-card reveal" data-category="omega3">
+
+            <div class="catalog-image catalog-coming-soon">
+
+                <span>
+                    Coming Soon
+                </span>
+
+            </div>
+
+            <div class="catalog-info">
+
+                <p class="catalog-kicker">
+                    Omega-3
+                </p>
+
+                <h3>SOMEGA-3 + CoQ10</h3>
+
+                <p>
+                    A thoughtfully developed combination of
+                    Omega-3 and Coenzyme Q10 with a science-first
+                    approach.
+                </p>
+
+                <span class="catalog-status">
+                    Under Development
+                </span>
+
+            </div>
+
+        </article>
+
+
     </div>
+
 </section>
 
 <section class="section future-areas">
@@ -555,6 +817,43 @@ As Solyra grows, we'll thoughtfully expand into wellness categories that align w
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+const productFilters = document.querySelectorAll(".product-filter");
+const catalogCards = document.querySelectorAll(".catalog-card");
+
+productFilters.forEach(filter => {
+
+    filter.addEventListener("click", () => {
+
+        productFilters.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        filter.classList.add("active");
+
+        const selected = filter.textContent.trim();
+
+        catalogCards.forEach(card => {
+
+            const category = card.dataset.category;
+
+            if (
+                selected === "All" ||
+                (selected === "Daily Wellness" && category === "daily") ||
+                (selected === "Omega-3" && category === "omega3")
+            ) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+</script>
 
 </body>
 </html>
