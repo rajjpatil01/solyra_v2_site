@@ -822,6 +822,68 @@ As Solyra grows, we'll thoughtfully expand into wellness categories that align w
 const productFilters = document.querySelectorAll(".product-filter");
 const catalogCards = document.querySelectorAll(".catalog-card");
 
+
+// ===============================
+// LOAD PRODUCTS FROM BACKEND
+// ===============================
+
+async function loadProducts() {
+    try {
+        const response = await fetch("http://localhost:5000/api/products");
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch products");
+        }
+
+        const products = await response.json();
+
+        // Find the Daily Wellness card
+        const solvitCard = document.querySelector(
+            '.catalog-card[data-category="daily"]'
+        );
+
+        // We only have Solvit D3 in the database right now
+        if (products.length > 0 && solvitCard) {
+
+            const product = products[0];
+
+            // Product name
+            const title = solvitCard.querySelector("h3");
+            title.textContent = product.name;
+
+            // Product description
+            const description = solvitCard.querySelector(
+                ".catalog-info > p:not(.catalog-kicker)"
+            );
+
+            description.textContent = product.description;
+
+            // Product image
+            const image = solvitCard.querySelector(".catalog-image img");
+
+            if (image) {
+                image.src = product.image_url || "assets/D3.png";
+                image.alt = product.name;
+            }
+
+            // Product page link
+            const productLink = solvitCard.querySelector(".btn");
+
+            if (productLink) {
+                productLink.href = "product-d3.html";
+            }
+        }
+
+    } catch (error) {
+        console.error("Could not load products:", error);
+    }
+}
+
+
+// ===============================
+// PRODUCT FILTERS
+// ===============================
+
 productFilters.forEach(filter => {
 
     filter.addEventListener("click", () => {
@@ -853,7 +915,13 @@ productFilters.forEach(filter => {
     });
 
 });
-</script>
 
+
+// ===============================
+// START
+// ===============================
+
+loadProducts();
+</script>
 </body>
 </html>
